@@ -1,11 +1,12 @@
 import asyncio
 import logging
 import sys
-from aiogram import Bot, Dispatcher, html, F
+import sqlite3
+from aiogram import Bot, Dispatcher, html, F,types
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart
-from aiogram.types import Message, CallbackQuery, FSInputFile
+from aiogram.types import Message, CallbackQuery
 from aiogram.fsm.context import FSMContext
 from config import BOT_TOKEN as token
 from button import menyu, taomlar, ichimliklar, buyurtma_sonlar
@@ -99,3 +100,5 @@ async def main() -> None:
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
+
+
